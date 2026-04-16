@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Employee Management Form</title>
+    <style>
+      h3 { text-align: center; }
+      h5 { text-align: center; }
+
+      .custfieldset {
+        width: 40%;
+      }
+
+      .flexcontainer {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .dateandtime {
+        text-align: right;
+        margin-left: 80%;
+        margin-top: -6%;
+        border: none;
+      }
+
+      .personal {
+        width: 98%;
+      }
+
+      table {
+        border-spacing: 6px;
+        width: 100%;
+      }
+
+      td {
+        padding: 5px;
+        text-align: center;
+      }
+
+      .contact {
+        width: 98%;
+      }
+
+      .documents {
+        width: 98%;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h3>EMPLOYEE MANAGEMENT FORM</h3>
+      <h5>(For Internal HR Use Only)</h5>
+      <hr/>
+
+      <fieldset class="custfieldset">
+        <legend>For Office Use Only</legend>
+        <label for="branch">Department</label>
+        <input type="text" id="branch" name="branch"><br><br>
+        <label for="empID">Employee ID</label>
+        <input type="text" id="empID" name="empID"><br><br>
+        <label for="empNo">Employee Code</label>
+        <input type="text" id="empNo" name="empNo">
+      </fieldset>
+
+      <fieldset class="dateandtime">
+        <label for="joinDate">Joining Date</label>
+        <input type="date" id="joinDate" name="joinDate"><br>
+        <label for="joinTime">Time</label>
+        <input type="time" id="joinTime" name="joinTime">
+      </fieldset>
+
+      <br><br>
+      <fieldset class="personal">
+        <legend>Personal Information</legend>
+        <table border="2">
+          <tr>
+            <td>1</td>
+            <td>Full Name</td>
+            <td colspan="3"><input type="text" name="fullName"></td>
+            <td rowspan="5">
+              <input type="file" name="profilePhoto"><br><br>
+              <div class="box">PROFILE PHOTO</div>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Father's/Mother's Name</td>
+            <td colspan="3">
+              <input type="text" name="guardianName">
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Gender</td>
+            <td>
+              <label for="male">Male</label>
+              <input type="radio" id="male" name="gender" value="male">
+              <label for="female">Female</label>
+              <input type="radio" id="female" name="gender" value="female">
+            </td>
+            <td>Date of Birth</td>
+            <td><input type="date" name="dob"></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Designation</td>
+            <td><input type="text" name="designation"></td>
+            <td>Employee Type</td>
+            <td>
+              <select name="empType">
+                <option value="permanent">Permanent</option>
+                <option value="contract">Contract</option>
+                <option value="intern">Intern</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Marital Status</td>
+            <td>
+              <label>Married</label>
+              <input type="radio" name="marital" value="married">
+              <label>Unmarried</label>
+              <input type="radio" name="marital" value="unmarried">
+              <label>Widowed</label>
+              <input type="radio" name="marital" value="widowed">
+            </td>
+            <td>Signature</td>
+            <td><input type="text" name="signature"></td>
+          </tr>
+        </table>
+      </fieldset>
+      <br>
+      <fieldset class="contact">
+        <legend>Contact Details</legend>
+        <table border="2">
+          <tr>
+            <td>Mobile No.</td>
+            <td colspan="2"><input type="text" name="mobile1"></td>
+            <td>Alternate Mobile</td>
+            <td colspan="2"><input type="text" name="mobile2"></td>
+            <td>Landline</td>
+            <td colspan="2"><input type="text" name="landline"></td>
+          </tr>
+          <tr>
+            <td>Personal Email</td>
+            <td colspan="3"><input type="email" name="emailPersonal"></td>
+            <td>Official Email</td>
+            <td colspan="3"><input type="email" name="emailOfficial"></td>
+          </tr>
+          <tr>
+            <td rowspan="2">Current Address</td>
+            <td rowspan="2"><input type="text" name="currentAddress"></td>
+            <td>City</td>
+            <td colspan="2"><input type="text" name="currentCity"></td>
+            <td>District</td>
+            <td colspan="2"><input type="text" name="currentDistrict"></td>
+          </tr>
+          <tr>
+            <td>State</td>
+            <td colspan="2"><input type="text" name="currentState"></td>
+            <td>Pincode</td>
+            <td colspan="2"><input type="text" name="currentPincode"></td>
+          </tr>
+          <tr>
+            <td rowspan="2">Permanent Address</td>
+            <td rowspan="2"><input type="text" name="permanentAddress"></td>
+            <td>City</td>
+            <td colspan="2"><input type="text" name="permanentCity"></td>
+            <td>District</td>
+            <td colspan="2"><input type="text" name="permanentDistrict"></td>
+          </tr>
+          <tr>
+            <td>State</td>
+            <td colspan="2"><input type="text" name="permanentState"></td>
+            <td>Pincode</td>
+            <td colspan="2"><input type="text" name="permanentPincode"></td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <br>
+
+      <fieldset class="documents">
+        <legend>Documents</legend>
+        <table border="2">
+          <tr>
+            <td>Aadhar No.</td>
+            <td><input type="text" name="aadhar"></td>
+            <td><input type="file" name="aadharFile"></td>
+            <td>PAN No.</td>
+            <td><input type="text" name="pan"></td>
+            <td><input type="file" name="panFile"></td>
+          </tr>
+          <tr>
+            <td>Resume</td>
+            <td colspan="2"><input type="file" name="resume"></td>
+            <td>ID Proof</td>
+            <td colspan="2"><input type="file" name="idProof"></td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <br>
+      <hr/>
+
+      <p>I confirm that the information provided above is true to the best of my knowledge. All necessary documents have been submitted.</p>
+
+      <table>
+        <tr>
+          <td>Date: <input type="date" name="formDate"></td>
+          <td>Place: <input type="text" name="formPlace"></td>
+          <td>Signature:</td>
+          <td><input type="text" name="finalSignature"></td>
+          <tr><td><input type="submit" name="submit"></td></tr>
+
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
